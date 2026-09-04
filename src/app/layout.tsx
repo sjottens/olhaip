@@ -37,33 +37,53 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Suppress startTime errors from Next.js web vitals without breaking other code
+              // Nuclear option: Polyfill PerformanceObserver to PREVENT startTime errors at source
+              try {
+                if (window.PerformanceObserver) {
+                  const OrigPO = window.PerformanceObserver;
+                  window.PerformanceObserver = class extends OrigPO {
+                    constructor(callback) {
+                      const wrappedCallback = (list) => {
+                        try {
+                          // Ensure ALL entries have startTime BEFORE calling callback
+                          const entries = list.getEntries();
+                          for (let i = 0; i < entries.length; i++) {
+                            const entry = entries[i];
+                            if (entry && !entry.startTime) {
+                              // Safe default for missing startTime
+                              Object.defineProperty(entry, 'startTime', {
+                                value: entry.responseEnd || entry.fetchStart || 0,
+                                writable: false,
+                                configurable: true
+                              });
+                            }
+                          }
+                        } catch (e) {
+                          // Silently fail, don't let this break anything
+                        }
+                        try {
+                          callback(list);
+                        } catch (e) {
+                          if (!String(e).includes('startTime')) {
+                            console.error('PerformanceObserver callback error:', e);
+                          }
+                        }
+                      };
+                      super(wrappedCallback);
+                    }
+                  };
+                }
+              } catch (e) {
+                // If polyfill fails, silently continue
+              }
               
-              // 1. Only suppress startTime in console.error
+              // Fallback: Suppress console errors
               const origError = console.error;
               console.error = function(...args) {
                 const str = args.map(a => String(a)).join(' ');
-                if (str.includes('startTime')) return; // Suppress
-                return origError.apply(console, args); // Pass through others
+                if (str.includes('startTime')) return;
+                return origError.apply(console, args);
               };
-              
-              // 2. Suppress startTime errors but DON'T override existing handlers
-              const origOnerror = window.onerror;
-              window.onerror = function(msg, url, line, col, err) {
-                if (msg && String(msg).includes('startTime')) return true; // Suppress startTime
-                // Call original handler if it exists
-                if (origOnerror) {
-                  return origOnerror.apply(window, arguments);
-                }
-                return false;
-              };
-              
-              // 3. Only suppress unhandledrejection for startTime
-              window.addEventListener('unhandledrejection', function(e) {
-                if (e.reason && String(e.reason).includes('startTime')) {
-                  e.preventDefault();
-                }
-              });
             `,
           }}
         />
