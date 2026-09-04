@@ -37,47 +37,33 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Nuclear option: Polyfill PerformanceObserver to PREVENT startTime errors at source
+              // NUCLEAR: Fix startTime at the property level - intercept undefined before it throws
               try {
-                if (window.PerformanceObserver) {
-                  const OrigPO = window.PerformanceObserver;
-                  window.PerformanceObserver = class extends OrigPO {
-                    constructor(callback) {
-                      const wrappedCallback = (list) => {
-                        try {
-                          // Ensure ALL entries have startTime BEFORE calling callback
-                          const entries = list.getEntries();
-                          for (let i = 0; i < entries.length; i++) {
-                            const entry = entries[i];
-                            if (entry && !entry.startTime) {
-                              // Safe default for missing startTime
-                              Object.defineProperty(entry, 'startTime', {
-                                value: entry.responseEnd || entry.fetchStart || 0,
-                                writable: false,
-                                configurable: true
-                              });
-                            }
-                          }
-                        } catch (e) {
-                          // Silently fail, don't let this break anything
-                        }
-                        try {
-                          callback(list);
-                        } catch (e) {
-                          if (!String(e).includes('startTime')) {
-                            console.error('PerformanceObserver callback error:', e);
-                          }
-                        }
-                      };
-                      super(wrappedCallback);
-                    }
-                  };
+                if (window.PerformanceEntry) {
+                  const proto = window.PerformanceEntry.prototype;
+                  const origDesc = Object.getOwnPropertyDescriptor(proto, 'startTime') || {};
+                  
+                  Object.defineProperty(proto, 'startTime', {
+                    get() {
+                      const val = origDesc.get ? origDesc.get.call(this) : this._startTime;
+                      // Never return undefined - always return a safe number
+                      return typeof val === 'number' ? val : 0;
+                    },
+                    set(value) {
+                      if (origDesc.set) {
+                        origDesc.set.call(this, value);
+                      } else {
+                        this._startTime = value;
+                      }
+                    },
+                    configurable: true
+                  });
                 }
               } catch (e) {
-                // If polyfill fails, silently continue
+                // Silently fail
               }
               
-              // Fallback: Suppress console errors
+              // Fallback: Also suppress in console
               const origError = console.error;
               console.error = function(...args) {
                 const str = args.map(a => String(a)).join(' ');
