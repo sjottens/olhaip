@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import { StructuredData } from '@/components/seo/StructuredData';
 import { generateArticleSchema } from '@/lib/schema';
 import Link from 'next/link';
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 
 export default function WhatIsAnIPAddressPage() {
   const articleSchema = generateArticleSchema(
@@ -34,12 +35,14 @@ export default function WhatIsAnIPAddressPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
       <StructuredData schema={articleSchema} />
-      {/* Breadcrumb */}
-      <div className="mb-8">
-        <Link href="/guides" className="text-sm text-[var(--color-primary)] hover:text-[var(--color-primary-dark)]">
-          ← Back to Guides
-        </Link>
-      </div>
+      {/* Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Guides', href: '/guides' },
+          { label: 'What Is an IP Address?', href: '/guides/what-is-an-ip-address' },
+        ]}
+      />
 
       {/* Header */}
       <div className="mb-12">

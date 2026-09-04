@@ -2,6 +2,8 @@
 
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
+import { RelatedTools } from '@/components/ui/RelatedTools';
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { isValidIPv4 } from '@/lib/client-utils';
 
 export default function IPv4CheckerPage() {
@@ -13,6 +15,15 @@ export default function IPv4CheckerPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      {/* Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Tools', href: '/ip-lookup' },
+          { label: 'IPv4 Checker', href: '/ipv4-checker' },
+        ]}
+      />
+
       {/* Header */}
       <div className="mb-12">
         <h1 className="text-4xl lg:text-5xl font-bold text-[var(--color-foreground)] mb-4">
@@ -99,7 +110,7 @@ export default function IPv4CheckerPage() {
       </Card>
 
       {/* Private Ranges */}
-      <Card>
+      <Card className="mb-12">
         <CardHeader>
           <h3 className="font-semibold text-[var(--color-foreground)]">
             Private IPv4 Ranges (RFC 1918)
@@ -114,6 +125,42 @@ export default function IPv4CheckerPage() {
           </p>
         </CardContent>
       </Card>
+
+      {/* Related Tools */}
+      <RelatedTools
+        tools={[
+          {
+            href: '/',
+            title: 'What Is My IP?',
+            description: 'Check your public IP address',
+          },
+          {
+            href: '/ipv6-checker',
+            title: 'IPv6 Checker',
+            description: 'Check IPv6 addressing',
+          },
+          {
+            href: '/ip-validator',
+            title: 'IP Validator',
+            description: 'Validate any IP address',
+          },
+          {
+            href: '/ip-lookup',
+            title: 'IP Lookup',
+            description: 'Look up any IP address',
+          },
+          {
+            href: '/guides/ipv4-vs-ipv6',
+            title: 'IPv4 vs IPv6',
+            description: 'Learn the differences',
+          },
+          {
+            href: '/guides/public-vs-private-ip',
+            title: 'Public vs Private IP',
+            description: 'Understand IP types',
+          },
+        ]}
+      />
     </div>
   );
 }

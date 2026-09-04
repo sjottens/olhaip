@@ -2,10 +2,20 @@
 
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import Link from 'next/link';
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 
 export default function WhatCanTheyDoPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      {/* Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Guides', href: '/guides' },
+          { label: 'What Can Someone Do With Your IP?', href: '/guides/what-can-someone-do-with-your-ip' },
+        ]}
+      />
+
       <div className="mb-8">
         <Link href="/guides" className="text-sm text-[var(--color-primary)]">
           ← Back to Guides

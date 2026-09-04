@@ -6,20 +6,20 @@ import { Footer } from "@/components/layout/Footer";
 export const metadata: Metadata = {
   title: "What Is My IP Address? | OlhaIP",
   description:
-    "See what the internet sees. Check your public IP address, discover your connection details, location, ISP, and more with OlhaIP.",
-  keywords: "IP address, public IP, IPv4, IPv6, my IP, check IP, network information",
+    "Find your public IP address instantly. OlhaIP shows your IPv4, IPv6, connection details, and helpful network information in one simple view.",
+  keywords: "IP address, my IP, public IP, IPv4, IPv6, check IP, network information, what is my IP",
   openGraph: {
     title: "What Is My IP Address? | OlhaIP",
     description:
-      "See what the internet sees. Check your public IP address, discover your connection details, location, ISP, and more.",
+      "Find your public IP address instantly and understand your internet connection with OlhaIP.",
     type: "website",
     url: "https://olhaip.com",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "What Is My IP Address? | OlhaIP",
     description:
-      "See what the internet sees. Check your public IP address and understand your internet connection.",
+      "Find your public IP address and learn about your internet connection.",
   },
 };
 

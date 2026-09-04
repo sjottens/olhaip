@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 
 export const metadata: Metadata = {
   title: 'About OlhaIP',
@@ -9,6 +10,14 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      {/* Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'About', href: '/about' },
+        ]}
+      />
+
       <h1 className="text-4xl lg:text-5xl font-bold text-[var(--color-foreground)] mb-8">
         About OlhaIP
       </h1>

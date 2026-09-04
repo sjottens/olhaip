@@ -18,28 +18,32 @@ export function Header() {
               className="h-10 w-auto"
             />
           </Link>
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-1">
             <Link
               href="/ip-lookup"
-              className="text-sm text-[var(--color-foreground-secondary)] hover:text-[var(--color-primary)] transition-colors"
+              className="text-sm text-[var(--color-foreground-secondary)] hover:text-[var(--color-primary)] transition-colors px-3 py-2"
+              title="Look up any IP address"
             >
               IP Lookup
             </Link>
             <Link
-              href="/browser-info"
-              className="text-sm text-[var(--color-foreground-secondary)] hover:text-[var(--color-primary)] transition-colors"
+              href="/dns-lookup"
+              className="text-sm text-[var(--color-foreground-secondary)] hover:text-[var(--color-primary)] transition-colors px-3 py-2"
+              title="DNS lookup tool"
             >
-              Browser Info
+              DNS
             </Link>
             <Link
               href="/guides"
-              className="text-sm text-[var(--color-foreground-secondary)] hover:text-[var(--color-primary)] transition-colors"
+              className="text-sm text-[var(--color-foreground-secondary)] hover:text-[var(--color-primary)] transition-colors px-3 py-2"
+              title="Educational guides"
             >
               Guides
             </Link>
             <Link
               href="/about"
-              className="text-sm text-[var(--color-foreground-secondary)] hover:text-[var(--color-primary)] transition-colors"
+              className="text-sm text-[var(--color-foreground-secondary)] hover:text-[var(--color-primary)] transition-colors px-3 py-2"
+              title="About OlhaIP"
             >
               About
             </Link>

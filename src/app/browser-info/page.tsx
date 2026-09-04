@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { getBrowserInfo } from '@/lib/client-utils';
 import { BrowserInfoDisplay } from '@/components/browser/BrowserInfoDisplay';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import type { BrowserInfo } from '@/lib/types';
 
 export default function BrowserInfoPage() {
@@ -15,6 +16,15 @@ export default function BrowserInfoPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      {/* Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Tools', href: '/ip-lookup' },
+          { label: 'Browser Info', href: '/browser-info' },
+        ]}
+      />
+
       {/* Header */}
       <div className="mb-12">
         <h1 className="text-4xl lg:text-5xl font-bold text-[var(--color-foreground)] mb-4">

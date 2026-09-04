@@ -2,6 +2,7 @@
 
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import Link from 'next/link';
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 
 export default function IPv4VsIPv6Page() {
   const comparison = [
@@ -15,6 +16,15 @@ export default function IPv4VsIPv6Page() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      {/* Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Guides', href: '/guides' },
+          { label: 'IPv4 vs IPv6', href: '/guides/ipv4-vs-ipv6' },
+        ]}
+      />
+
       <div className="mb-8">
         <Link href="/guides" className="text-sm text-[var(--color-primary)] hover:text-[var(--color-primary-dark)]">
           ← Back to Guides

@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import Link from 'next/link';
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 
 export const metadata = {
   title: 'Guides & Articles | OlhaIP',
@@ -70,6 +71,14 @@ const guides = [
 export default function GuidesPage() {
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      {/* Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Guides', href: '/guides' },
+        ]}
+      />
+
       {/* Header */}
       <div className="mb-12">
         <h1 className="text-4xl lg:text-5xl font-bold text-[var(--color-foreground)] mb-4">

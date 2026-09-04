@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
+import { RelatedTools } from '@/components/ui/RelatedTools';
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { isValidIPv4, isValidIPv6, getIPVersion } from '@/lib/client-utils';
 import type { IPInfo } from '@/lib/types';
 
@@ -57,6 +59,15 @@ export default function IPLookupPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      {/* Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Tools', href: '/ip-lookup' },
+          { label: 'IP Lookup', href: '/ip-lookup' },
+        ]}
+      />
+
       {/* Header */}
       <div className="mb-12">
         <h1 className="text-4xl lg:text-5xl font-bold text-[var(--color-foreground)] mb-4">
@@ -178,6 +189,42 @@ export default function IPLookupPage() {
           </CardContent>
         </Card>
       )}
+
+      {/* Related Tools */}
+      <RelatedTools
+        tools={[
+          {
+            href: '/',
+            title: 'What Is My IP?',
+            description: 'Check your public IP address',
+          },
+          {
+            href: '/ipv4-checker',
+            title: 'IPv4 Checker',
+            description: 'Check IPv4 addressing',
+          },
+          {
+            href: '/ipv6-checker',
+            title: 'IPv6 Checker',
+            description: 'Check IPv6 addressing',
+          },
+          {
+            href: '/ip-validator',
+            title: 'IP Validator',
+            description: 'Validate any IP address',
+          },
+          {
+            href: '/dns-lookup',
+            title: 'DNS Lookup',
+            description: 'Look up DNS records',
+          },
+          {
+            href: '/reverse-dns',
+            title: 'Reverse DNS',
+            description: 'Reverse DNS lookup',
+          },
+        ]}
+      />
     </div>
   );
 }

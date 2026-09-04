@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
+import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 import { isValidIPv4, isValidIPv6 } from '@/lib/client-utils';
 
 export default function ReverseDNSPage() {
@@ -38,6 +39,15 @@ export default function ReverseDNSPage() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      {/* Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: 'Home', href: '/' },
+          { label: 'Tools', href: '/ip-lookup' },
+          { label: 'Reverse DNS', href: '/reverse-dns' },
+        ]}
+      />
+
       {/* Header */}
       <div className="mb-12">
         <h1 className="text-4xl lg:text-5xl font-bold text-[var(--color-foreground)] mb-4">
