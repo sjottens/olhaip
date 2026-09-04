@@ -46,7 +46,7 @@ const guides = [
     keywords: 'DNS, domain name system, DNS resolver',
   },
   {
-    slug: 'can-your-ip-address-change',
+    slug: 'can-ip-address-change',
     title: 'Can Your IP Address Change?',
     description:
       'Understand when and why IP addresses change, and whether you can keep a static IP.',
@@ -60,7 +60,7 @@ const guides = [
     keywords: 'IP address privacy, IP address security, geolocation',
   },
   {
-    slug: 'vpn-and-ip-address',
+    slug: 'does-vpn-change-your-ip',
     title: 'Does a VPN Change Your IP Address?',
     description:
       'Understand how VPNs work and how they change your apparent IP address online.',
