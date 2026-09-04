@@ -23,9 +23,9 @@ export function RelatedTools({
         {title}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {tools.map((tool) => (
+        {tools.map((tool, index) => (
           <Link
-            key={tool.href}
+            key={`tool-${index}`}
             href={tool.href}
             className="group bg-[var(--color-surface)] rounded-lg border border-[var(--color-border)] p-4 hover:border-[var(--color-primary)] transition-colors"
           >

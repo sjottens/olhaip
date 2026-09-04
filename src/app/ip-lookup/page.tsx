@@ -63,7 +63,6 @@ export default function IPLookupPage() {
       <Breadcrumbs
         items={[
           { label: 'Home', href: '/' },
-          { label: 'Tools', href: '/ip-lookup' },
           { label: 'IP Lookup', href: '/ip-lookup' },
         ]}
       />

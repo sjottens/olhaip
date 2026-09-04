@@ -32,7 +32,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
       >
         <ol className="flex flex-wrap items-center space-x-2">
           {items.map((item, index) => (
-            <li key={item.href} className="flex items-center space-x-2">
+            <li key={`breadcrumb-${index}`} className="flex items-center space-x-2">
               {index > 0 && (
                 <span className="text-[var(--color-foreground-secondary)]">/</span>
               )}
