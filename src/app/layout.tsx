@@ -37,52 +37,33 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Aggressive startTime error suppression
-              window.__startTimeFixed = true;
+              // Suppress startTime errors from Next.js web vitals without breaking other code
               
-              // Override console.error
+              // 1. Only suppress startTime in console.error
               const origError = console.error;
               console.error = function(...args) {
                 const str = args.map(a => String(a)).join(' ');
-                if (str.includes('startTime')) return;
-                return origError.apply(console, args);
+                if (str.includes('startTime')) return; // Suppress
+                return origError.apply(console, args); // Pass through others
               };
               
-              // Override global error handler
+              // 2. Suppress startTime errors but DON'T override existing handlers
+              const origOnerror = window.onerror;
               window.onerror = function(msg, url, line, col, err) {
-                if (msg && String(msg).includes('startTime')) return true;
-                if (err && err.message && err.message.includes('startTime')) return true;
+                if (msg && String(msg).includes('startTime')) return true; // Suppress startTime
+                // Call original handler if it exists
+                if (origOnerror) {
+                  return origOnerror.apply(window, arguments);
+                }
                 return false;
               };
               
-              // Override unhandled rejection
+              // 3. Only suppress unhandledrejection for startTime
               window.addEventListener('unhandledrejection', function(e) {
                 if (e.reason && String(e.reason).includes('startTime')) {
                   e.preventDefault();
                 }
               });
-              
-              // Polyfill for performance entries
-              if (window.PerformanceObserver) {
-                const OrigPO = window.PerformanceObserver;
-                window.PerformanceObserver = class extends OrigPO {
-                  constructor(cb) {
-                    super((list) => {
-                      try {
-                        const entries = list.getEntries();
-                        entries.forEach(e => {
-                          if (e && !e.startTime) {
-                            e.startTime = e.responseEnd || e.fetchStart || 0;
-                          }
-                        });
-                        cb(list);
-                      } catch (err) {
-                        if (!String(err).includes('startTime')) console.error(err);
-                      }
-                    });
-                  }
-                };
-              }
             `,
           }}
         />
