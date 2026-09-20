@@ -1,18 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { getBrowserInfo } from '@/lib/client-utils';
+import { useBrowserInfo } from '@/lib/use-browser-info';
 import { BrowserInfoDisplay } from '@/components/browser/BrowserInfoDisplay';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
-import type { BrowserInfo } from '@/lib/types';
 
 export default function BrowserInfoPage() {
-  const [browserInfo, setBrowserInfo] = useState<BrowserInfo | null>(null);
-
-  useEffect(() => {
-    setBrowserInfo(getBrowserInfo());
-  }, []);
+  const browserInfo = useBrowserInfo();
 
   return (
     <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
@@ -72,7 +66,7 @@ export default function BrowserInfoPage() {
           <div>
             <p className="font-medium text-[var(--color-foreground)] mb-1">Browser Name & Version</p>
             <p>
-              The web browser you're using and its version number. This helps identify compatibility with web features.
+              The web browser you&apos;re using and its version number. This helps identify compatibility with web features.
             </p>
           </div>
           <div>
@@ -84,7 +78,7 @@ export default function BrowserInfoPage() {
           <div>
             <p className="font-medium text-[var(--color-foreground)] mb-1">Device Type</p>
             <p>
-              Whether you're on a desktop, mobile phone, or tablet. Used for responsive web design optimization.
+              Whether you&apos;re on a desktop, mobile phone, or tablet. Used for responsive web design optimization.
             </p>
           </div>
           <div>

@@ -33,7 +33,7 @@ export default function IPv4VsIPv6Page() {
 
       <div className="mb-12">
         <h1 className="text-4xl lg:text-5xl font-bold text-[var(--color-foreground)] mb-4">
-          IPv4 vs IPv6: What's the Difference?
+          IPv4 vs IPv6: What&apos;s the Difference?
         </h1>
       </div>
 

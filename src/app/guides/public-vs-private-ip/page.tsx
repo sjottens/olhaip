@@ -53,7 +53,7 @@ export default function PublicVsPrivateIPPage() {
           </CardHeader>
           <CardContent className="space-y-4 text-[var(--color-foreground-secondary)]">
             <p>
-              Private IP addresses are used within local networks and are not routable on the public internet. They're reserved by RFC 1918 for internal use only.
+              Private IP addresses are used within local networks and are not routable on the public internet. They&apos;re reserved by RFC 1918 for internal use only.
             </p>
             <p>
               Your router assigns private IPs to your devices (phones, computers, printers, etc.) so they can communicate with each other. These addresses are not unique across the internet.

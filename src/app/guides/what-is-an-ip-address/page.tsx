@@ -61,7 +61,7 @@ export default function WhatIsAnIPAddressPage() {
           </CardHeader>
           <CardContent className="space-y-4 text-[var(--color-foreground-secondary)]">
             <p>
-              An IP address is a unique numerical identifier assigned to a device or network interface connected to an IP network. It's used to route data packets to the correct destination on a network or across the internet.
+              An IP address is a unique numerical identifier assigned to a device or network interface connected to an IP network. It&apos;s used to route data packets to the correct destination on a network or across the internet.
             </p>
             <p>
               IP stands for Internet Protocol. The protocol is the set of rules that defines how data is sent and received across networks.
@@ -77,7 +77,7 @@ export default function WhatIsAnIPAddressPage() {
           </CardHeader>
           <CardContent className="space-y-4 text-[var(--color-foreground-secondary)]">
             <p>
-              When you send data across the internet, it's broken into small packets. Each packet includes a source IP address (where it's coming from) and a destination IP address (where it's going).
+              When you send data across the internet, it&apos;s broken into small packets. Each packet includes a source IP address (where it&apos;s coming from) and a destination IP address (where it&apos;s going).
             </p>
             <p>
               Network routers read the destination IP address and forward each packet toward its destination. This process happens billions of times per second across the internet.
@@ -93,7 +93,7 @@ export default function WhatIsAnIPAddressPage() {
           </CardHeader>
           <CardContent className="space-y-4 text-[var(--color-foreground-secondary)]">
             <p>
-              Your public IP address is what websites and online services see when you connect to the internet. It's assigned by your Internet Service Provider (ISP).
+              Your public IP address is what websites and online services see when you connect to the internet. It&apos;s assigned by your Internet Service Provider (ISP).
             </p>
             <p>
               Websites use your public IP to know where to send the data you requested. Email services use it to verify communications. In general, any service accessible over the internet knows your public IP.
@@ -109,7 +109,7 @@ export default function WhatIsAnIPAddressPage() {
           </CardHeader>
           <CardContent className="space-y-4 text-[var(--color-foreground-secondary)]">
             <p>
-              Private IP addresses are used within local networks (like your home Wi-Fi) and aren't directly routable on the public internet.
+              Private IP addresses are used within local networks (like your home Wi-Fi) and aren&apos;t directly routable on the public internet.
             </p>
             <p>
               Common private IP ranges include 192.168.x.x, 10.x.x.x, and 172.16.x.x to 172.31.x.x. Your router assigns private IPs to your devices so they can communicate with each other.
@@ -153,7 +153,7 @@ export default function WhatIsAnIPAddressPage() {
                 href="/guides/ipv4-vs-ipv6"
                 className="text-[var(--color-primary)] hover:text-[var(--color-primary-dark)]"
               >
-                → IPv4 vs IPv6: What's the Difference?
+                → IPv4 vs IPv6: What&apos;s the Difference?
               </Link>
             </li>
             <li>

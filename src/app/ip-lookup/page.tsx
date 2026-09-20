@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import { RelatedTools } from '@/components/ui/RelatedTools';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
-import { isValidIPv4, isValidIPv6, getIPVersion } from '@/lib/client-utils';
+import { getIPVersion } from '@/lib/client-utils';
 import type { IPInfo } from '@/lib/types';
 
 interface IPLookupResult {

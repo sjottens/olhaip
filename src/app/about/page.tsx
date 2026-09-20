@@ -67,7 +67,7 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent className="space-y-4 text-[var(--color-foreground-secondary)]">
             <p>
-              We take privacy seriously. Your IP address is detected when you visit, but we don't store it permanently or track your activity.
+              We take privacy seriously. Your IP address is detected when you visit, but we don&apos;t store it permanently or track your activity.
             </p>
             <p>
               Our tools are designed to work entirely on your device whenever possible. Data sent to our servers for tool functionality (like DNS lookups) is not logged for longer than necessary.

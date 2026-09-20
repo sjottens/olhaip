@@ -155,7 +155,7 @@ export default function ISPLookupPage() {
           </div>
           <div>
             <p className="font-medium text-[var(--color-foreground)] mb-1">Type of Network</p>
-            <p>Such as "ISP", "Business", "Hosting", etc.</p>
+            <p>Such as &quot;ISP&quot;, &quot;Business&quot;, &quot;Hosting&quot;, etc.</p>
           </div>
         </CardContent>
       </Card>

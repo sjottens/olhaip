@@ -35,10 +35,10 @@ export default function DoesVPNChangeIPPage() {
           </CardHeader>
           <CardContent className="space-y-4 text-[var(--color-foreground-secondary)]">
             <p>
-              Yes, when you connect to a VPN (Virtual Private Network), your IP address changes. More specifically, websites and online services see the VPN provider's IP address instead of your real IP address.
+              Yes, when you connect to a VPN (Virtual Private Network), your IP address changes. More specifically, websites and online services see the VPN provider&apos;s IP address instead of your real IP address.
             </p>
             <p>
-              Your real IP address is hidden from the services you visit, making it appear as though you're connecting from a different location.
+              Your real IP address is hidden from the services you visit, making it appear as though you&apos;re connecting from a different location.
             </p>
           </CardContent>
         </Card>
@@ -56,10 +56,10 @@ export default function DoesVPNChangeIPPage() {
             </div>
             <div>
               <p className="font-semibold text-[var(--color-foreground)] mb-2">With VPN</p>
-              <p>Your computer → Encrypted tunnel to VPN → Website sees VPN's IP address</p>
+              <p>Your computer → Encrypted tunnel to VPN → Website sees VPN&apos;s IP address</p>
             </div>
             <p>
-              All your internet traffic is encrypted and routed through the VPN provider's servers. The VPN provider assigns you one of their IP addresses to use for all your connections.
+              All your internet traffic is encrypted and routed through the VPN provider&apos;s servers. The VPN provider assigns you one of their IP addresses to use for all your connections.
             </p>
           </CardContent>
         </Card>
@@ -81,11 +81,11 @@ export default function DoesVPNChangeIPPage() {
             </div>
             <div>
               <p className="font-semibold text-[var(--color-foreground)] mb-2">Appear to Be in Different Location</p>
-              <p>Websites will see you as being in the VPN provider's location, which can be useful for accessing geo-restricted content.</p>
+              <p>Websites will see you as being in the VPN provider&apos;s location, which can be useful for accessing geo-restricted content.</p>
             </div>
             <div>
               <p className="font-semibold text-[var(--color-foreground)] mb-2">Prevent ISP Tracking</p>
-              <p>Your ISP cannot see which websites you visit (though they can see you're using a VPN).</p>
+              <p>Your ISP cannot see which websites you visit (though they can see you&apos;re using a VPN).</p>
             </div>
           </CardContent>
         </Card>
@@ -93,16 +93,16 @@ export default function DoesVPNChangeIPPage() {
         <Card>
           <CardHeader>
             <h2 className="text-2xl font-semibold text-[var(--color-foreground)]">
-              What a VPN Doesn't Protect
+              What a VPN Doesn&apos;t Protect
             </h2>
           </CardHeader>
           <CardContent className="space-y-4 text-[var(--color-foreground-secondary)]">
             <ul className="list-disc list-inside space-y-1">
-              <li>VPNs don't prevent you from being tracked by your browser/cookies</li>
+              <li>VPNs don&apos;t prevent you from being tracked by your browser/cookies</li>
               <li>Websites still know if you log into an account (they can link your sessions)</li>
-              <li>A VPN doesn't protect you from malware or viruses</li>
+              <li>A VPN doesn&apos;t protect you from malware or viruses</li>
               <li>A VPN provider can see your traffic (choose a trusted provider)</li>
-              <li>VPNs don't make you completely anonymous online</li>
+              <li>VPNs don&apos;t make you completely anonymous online</li>
             </ul>
           </CardContent>
         </Card>
@@ -115,10 +115,10 @@ export default function DoesVPNChangeIPPage() {
           </CardHeader>
           <CardContent className="space-y-4 text-[var(--color-foreground-secondary)]">
             <p>
-              If you're considering a VPN, look for:
+              If you&apos;re considering a VPN, look for:
             </p>
             <ul className="list-disc list-inside space-y-1">
-              <li><strong>No-logs policy:</strong> They don't store your activity</li>
+              <li><strong>No-logs policy:</strong> They don&apos;t store your activity</li>
               <li><strong>Encryption:</strong> Strong encryption standards (AES-256)</li>
               <li><strong>Multiple servers:</strong> Options for different locations</li>
               <li><strong>Reputation:</strong> Independent audits and user reviews</li>

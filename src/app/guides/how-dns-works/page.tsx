@@ -35,10 +35,10 @@ export default function HowDNSWorksPage() {
           </CardHeader>
           <CardContent className="space-y-4 text-[var(--color-foreground-secondary)]">
             <p>
-              DNS stands for Domain Name System. It's the system that translates human-friendly domain names (like example.com) into IP addresses (like 93.184.216.34) that computers use to communicate.
+              DNS stands for Domain Name System. It&apos;s the system that translates human-friendly domain names (like example.com) into IP addresses (like 93.184.216.34) that computers use to communicate.
             </p>
             <p>
-              Without DNS, you'd need to remember IP addresses for every website you want to visit, making the internet much less user-friendly.
+              Without DNS, you&apos;d need to remember IP addresses for every website you want to visit, making the internet much less user-friendly.
             </p>
           </CardContent>
         </Card>
@@ -56,7 +56,7 @@ export default function HowDNSWorksPage() {
             </div>
             <div>
               <p className="font-semibold text-[var(--color-foreground)] mb-2">2. Recursive Resolver</p>
-              <p>Your ISP's recursive resolver receives your query. This resolver acts as a middleman, searching for the IP address on your behalf.</p>
+              <p>Your ISP&apos;s recursive resolver receives your query. This resolver acts as a middleman, searching for the IP address on your behalf.</p>
             </div>
             <div>
               <p className="font-semibold text-[var(--color-foreground)] mb-2">3. Root Nameserver</p>

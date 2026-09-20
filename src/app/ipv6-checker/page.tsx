@@ -1,6 +1,5 @@
 'use client';
 
-import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import { RelatedTools } from '@/components/ui/RelatedTools';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
@@ -62,7 +61,7 @@ export default function IPv6CheckerPage() {
           <CardContent className="space-y-3 text-sm text-[var(--color-foreground-secondary)]">
             <div>
               <p className="font-medium text-[var(--color-foreground)]">Vastly More Addresses</p>
-              <p>340 undecillion addresses vs IPv4's 4 billion</p>
+              <p>340 undecillion addresses vs IPv4&apos;s 4 billion</p>
             </div>
             <div>
               <p className="font-medium text-[var(--color-foreground)]">Built-in Security</p>

@@ -1,10 +1,8 @@
 'use client';
 
-import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import { RelatedTools } from '@/components/ui/RelatedTools';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
-import { isValidIPv4 } from '@/lib/client-utils';
 
 export default function IPv4CheckerPage() {
   const exampleIPs = [

@@ -53,7 +53,7 @@ export default function TermsPage() {
               <li>Use the materials for any commercial purpose or for any public display</li>
               <li>Attempt to reverse engineer any tools or software</li>
               <li>Remove any copyright or other proprietary notations</li>
-              <li>Transfer the materials to another person or 'mirror' the materials on any other server</li>
+              <li>Transfer the materials to another person or &apos;mirror&apos; the materials on any other server</li>
             </ul>
           </CardContent>
         </Card>
@@ -66,7 +66,7 @@ export default function TermsPage() {
           </CardHeader>
           <CardContent className="space-y-4">
             <p>
-              The materials on OlhaIP are provided 'as is'. OlhaIP makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+              The materials on OlhaIP are provided &apos;as is&apos;. OlhaIP makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
             </p>
             <p>
               IP geolocation information is approximate and should not be used for exact location determination. We do not guarantee accuracy of any information provided by lookup tools.

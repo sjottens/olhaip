@@ -116,13 +116,13 @@ export default function IPGeolocationPage() {
             IP geolocation provides an approximate location based on network information. It does NOT:
           </p>
           <ul className="list-disc list-inside space-y-1">
-            <li>Identify a person's exact physical location</li>
+            <li>Identify a person&apos;s exact physical location</li>
             <li>Reveal home addresses or precise coordinates</li>
             <li>Provide privacy violation capabilities</li>
             <li>Replace official location tracking methods</li>
           </ul>
           <p>
-            Geolocation accuracy varies from city-level to regional accuracy, depending on the data source. It's based on where the ISP's network infrastructure is located, not the user's actual location.
+            Geolocation accuracy varies from city-level to regional accuracy, depending on the data source. It&apos;s based on where the ISP&apos;s network infrastructure is located, not the user&apos;s actual location.
           </p>
         </CardContent>
       </Card>

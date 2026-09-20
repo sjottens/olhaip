@@ -30,12 +30,12 @@ export default function WhatCanTheyDoPage() {
         <Card>
           <CardHeader>
             <h2 className="text-2xl font-semibold text-[var(--color-foreground)]">
-              What's Visible in an IP Address?
+              What&apos;s Visible in an IP Address?
             </h2>
           </CardHeader>
           <CardContent className="space-y-4 text-[var(--color-foreground-secondary)]">
             <p>
-              An IP address can reveal some general information about you and your location, but it's much less detailed than many people think.
+              An IP address can reveal some general information about you and your location, but it&apos;s much less detailed than many people think.
             </p>
             <p>
               From an IP address, someone can typically determine:
@@ -51,7 +51,7 @@ export default function WhatCanTheyDoPage() {
         <Card>
           <CardHeader>
             <h2 className="text-2xl font-semibold text-[var(--color-foreground)]">
-              What's NOT Visible in an IP Address
+              What&apos;s NOT Visible in an IP Address
             </h2>
           </CardHeader>
           <CardContent className="space-y-4 text-[var(--color-foreground-secondary)]">
@@ -131,7 +131,7 @@ export default function WhatCanTheyDoPage() {
           <CardContent className="space-y-4 text-[var(--color-foreground-secondary)]">
             <div>
               <p className="font-semibold text-[var(--color-foreground)] mb-2">Use a VPN</p>
-              <p>A Virtual Private Network masks your real IP address, showing the VPN provider's IP instead.</p>
+              <p>A Virtual Private Network masks your real IP address, showing the VPN provider&apos;s IP instead.</p>
             </div>
             <div>
               <p className="font-semibold text-[var(--color-foreground)] mb-2">Use Tor Browser</p>
@@ -139,15 +139,15 @@ export default function WhatCanTheyDoPage() {
             </div>
             <div>
               <p className="font-semibold text-[var(--color-foreground)] mb-2">HTTPS Connection</p>
-              <p>Always use HTTPS websites—while it doesn't hide your IP, it encrypts your data in transit.</p>
+              <p>Always use HTTPS websites—while it doesn&apos;t hide your IP, it encrypts your data in transit.</p>
             </div>
             <div>
               <p className="font-semibold text-[var(--color-foreground)] mb-2">Proxy Services</p>
-              <p>Web proxies can hide your IP, though they're less secure than VPNs.</p>
+              <p>Web proxies can hide your IP, though they&apos;re less secure than VPNs.</p>
             </div>
             <div>
               <p className="font-semibold text-[var(--color-foreground)] mb-2">Be Cautious Online</p>
-              <p>Don't share personal information publicly, and be wary of phishing attempts.</p>
+              <p>Don&apos;t share personal information publicly, and be wary of phishing attempts.</p>
             </div>
           </CardContent>
         </Card>

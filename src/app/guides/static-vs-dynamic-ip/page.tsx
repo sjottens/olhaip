@@ -35,7 +35,7 @@ export default function StaticVsDynamicPage() {
           </CardHeader>
           <CardContent className="space-y-4 text-[var(--color-foreground-secondary)]">
             <p>
-              A static IP address remains the same and doesn't change. Once assigned, your device keeps the same IP for as long as the assignment is active.
+              A static IP address remains the same and doesn&apos;t change. Once assigned, your device keeps the same IP for as long as the assignment is active.
             </p>
             <p>
               Static IPs are typically used for:
@@ -58,7 +58,7 @@ export default function StaticVsDynamicPage() {
           </CardHeader>
           <CardContent className="space-y-4 text-[var(--color-foreground-secondary)]">
             <p>
-              A dynamic IP address changes periodically. Your ISP's DHCP server automatically assigns and reassigns addresses to devices on the network.
+              A dynamic IP address changes periodically. Your ISP&apos;s DHCP server automatically assigns and reassigns addresses to devices on the network.
             </p>
             <p>
               Dynamic IPs are used for:

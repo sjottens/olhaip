@@ -4,19 +4,16 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { IPDisplay } from '@/components/ip/IPDisplay';
 import { BrowserInfoDisplay } from '@/components/browser/BrowserInfoDisplay';
-import { getBrowserInfo } from '@/lib/client-utils';
-import type { BrowserInfo, IPInfo } from '@/lib/types';
+import { useBrowserInfo } from '@/lib/use-browser-info';
+import type { IPInfo } from '@/lib/types';
 
 export default function HomePage() {
   const [ipInfo, setIpInfo] = useState<Partial<IPInfo> | null>(null);
-  const [browserInfo, setBrowserInfo] = useState<BrowserInfo | null>(null);
+  const browserInfo = useBrowserInfo();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Get browser info immediately
-    setBrowserInfo(getBrowserInfo());
-
     // Fetch IP info from server
     const fetchIP = async () => {
       try {

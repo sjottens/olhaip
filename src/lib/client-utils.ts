@@ -3,7 +3,7 @@
  * Note: Public IP detection requires server-side API or third-party service
  */
 
-import type { BrowserInfo, IPInfo } from './types';
+import type { BrowserInfo } from './types';
 
 /**
  * Get browser and system information

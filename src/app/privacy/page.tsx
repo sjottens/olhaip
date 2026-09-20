@@ -62,7 +62,7 @@ export default function PrivacyPage() {
         <Card>
           <CardHeader>
             <h2 className="text-2xl font-semibold text-[var(--color-foreground)]">
-              What We Don't Do
+              What We Don&apos;t Do
             </h2>
           </CardHeader>
           <CardContent>
@@ -87,7 +87,7 @@ export default function PrivacyPage() {
               IP geolocation is approximate and should not be used to determine exact physical locations. It provides city or region-level accuracy at best.
             </p>
             <p>
-              The location shown is based on where the ISP's network infrastructure is located, not necessarily where you are.
+              The location shown is based on where the ISP&apos;s network infrastructure is located, not necessarily where you are.
             </p>
           </CardContent>
         </Card>
@@ -103,7 +103,7 @@ export default function PrivacyPage() {
               We use necessary infrastructure and hosting services. When you use lookup tools that require external APIs (like DNS lookups), we may send your query to appropriate service providers to retrieve results.
             </p>
             <p>
-              We do not provide your IP address or personal information to third-party services unless necessary for the specific tool you're using.
+              We do not provide your IP address or personal information to third-party services unless necessary for the specific tool you&apos;re using.
             </p>
           </CardContent>
         </Card>

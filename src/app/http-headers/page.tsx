@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { getRequestHeaders } from '@/lib/server-utils';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 

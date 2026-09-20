@@ -82,7 +82,7 @@ export default function CanIPAddressChangePage() {
           <CardContent className="space-y-4 text-[var(--color-foreground-secondary)]">
             <div>
               <p className="font-semibold text-[var(--color-foreground)] mb-2">Request a Static IP</p>
-              <p>Contact your ISP and request a static (fixed) IP address. This usually costs extra ($5-15/month) but guarantees your address won't change.</p>
+              <p>Contact your ISP and request a static (fixed) IP address. This usually costs extra ($5-15/month) but guarantees your address won&apos;t change.</p>
             </div>
             <div>
               <p className="font-semibold text-[var(--color-foreground)] mb-2">Business Internet Service</p>
@@ -107,7 +107,7 @@ export default function CanIPAddressChangePage() {
           </CardHeader>
           <CardContent className="space-y-4 text-[var(--color-foreground-secondary)]">
             <p>
-              For most users, IP address changes don't matter at all. Web browsing, email, and streaming work fine with dynamic IPs.
+              For most users, IP address changes don&apos;t matter at all. Web browsing, email, and streaming work fine with dynamic IPs.
             </p>
             <p>
               However, IP changes may affect you if you:
