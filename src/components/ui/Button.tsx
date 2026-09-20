@@ -19,7 +19,7 @@ export function Button({
 
   const variantStyles = {
     primary:
-      'bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-dark)] focus-visible:outline-[var(--color-primary)]',
+      'bg-[var(--color-primary)] text-[var(--color-on-primary)] hover:bg-[var(--color-primary-dark)] focus-visible:outline-[var(--color-primary)]',
     secondary:
       'bg-[var(--color-surface)] text-[var(--color-foreground)] border border-[var(--color-border)] hover:bg-[var(--color-surface-alt)] focus-visible:outline-[var(--color-primary)]',
     ghost:
