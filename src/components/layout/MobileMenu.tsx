@@ -61,6 +61,13 @@ export function MobileMenu() {
                 IP Lookup
               </Link>
               <Link
+                href="/speed-test"
+                className="px-4 py-3 text-sm text-[var(--color-foreground)] hover:bg-[var(--color-surface)] rounded-md transition-colors"
+                onClick={closeMenu}
+              >
+                Speed Test
+              </Link>
+              <Link
                 href="/browser-info"
                 className="px-4 py-3 text-sm text-[var(--color-foreground)] hover:bg-[var(--color-surface)] rounded-md transition-colors"
                 onClick={closeMenu}

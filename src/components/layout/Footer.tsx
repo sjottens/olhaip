@@ -79,6 +79,14 @@ export function Footer() {
                   HTTP Headers
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/speed-test"
+                  className="text-[var(--color-foreground-secondary)] hover:text-[var(--color-primary)] transition-colors"
+                >
+                  Speed Test
+                </Link>
+              </li>
             </ul>
           </div>
 

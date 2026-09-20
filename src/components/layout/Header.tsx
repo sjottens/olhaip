@@ -10,12 +10,12 @@ export function Header() {
           <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity" title="OlhaIP - See what the internet sees">
             {/* OlhaIP Logo Image */}
             <Image
-              src="/OlhaIP-logo.png"
+              src="/logo-mare26-camel.png"
               alt="OlhaIP - IP Address Information Platform"
               width={40}
               height={40}
               priority
-              className="h-10 w-10"
+              className="h-10 w-10 object-contain"
             />
           </Link>
           <nav className="hidden md:flex items-center space-x-1">
@@ -32,6 +32,13 @@ export function Header() {
               title="DNS lookup tool"
             >
               DNS
+            </Link>
+            <Link
+              href="/speed-test"
+              className="text-sm text-[var(--color-foreground-secondary)] hover:text-[var(--color-primary)] transition-colors px-3 py-2"
+              title="Internet speed test"
+            >
+              Speed Test
             </Link>
             <Link
               href="/guides"

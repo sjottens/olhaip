@@ -67,7 +67,7 @@ export default function HomePage() {
       </div>
 
       {/* Trust & Privacy Section */}
-      <div className="bg-blue-50 dark:bg-blue-900/10 border border-blue-200 dark:border-blue-800 rounded-xl p-6 lg:p-8 mb-12">
+      <div className="bg-[var(--color-primary)]/5 border border-[var(--color-primary)]/25 rounded-xl p-6 lg:p-8 mb-12">
         <h2 className="text-lg font-semibold text-[var(--color-foreground)] mb-3">
           Your IP, Explained Simply
         </h2>
@@ -140,7 +140,7 @@ export default function HomePage() {
         <h2 className="text-2xl font-bold text-[var(--color-foreground)] mb-8">
           Explore Our Tools
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
           <Link
             href="/ip-lookup"
             className="group bg-[var(--color-surface)] rounded-lg border border-[var(--color-border)] p-4 hover:border-[var(--color-primary)] transition-colors"
@@ -186,6 +186,18 @@ export default function HomePage() {
             </div>
             <p className="text-xs text-[var(--color-foreground-secondary)] mt-1">
               View request headers
+            </p>
+          </Link>
+
+          <Link
+            href="/speed-test"
+            className="group bg-[var(--color-surface)] rounded-lg border border-[var(--color-border)] p-4 hover:border-[var(--color-primary)] transition-colors"
+          >
+            <div className="font-semibold text-[var(--color-foreground)] group-hover:text-[var(--color-primary)] transition-colors">
+              Speed Test
+            </div>
+            <p className="text-xs text-[var(--color-foreground-secondary)] mt-1">
+              Test your internet speed
             </p>
           </Link>
         </div>
