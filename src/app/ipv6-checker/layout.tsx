@@ -1,11 +1,21 @@
-import { Metadata } from 'next';
+import { buildMetadata, baseTitle, SITE_URL } from '@/lib/seo';
+import { generateWebApplicationSchema } from '@/lib/schema';
+import { StructuredData } from '@/components/seo/StructuredData';
 
-export const metadata: Metadata = {
-  title: 'IPv6 Checker – Check Your IPv6 Address | OlhaIP',
-  description: 'Validate IPv6 addresses and understand IPv6 formatting. Check if an IP address is valid IPv6 (128-bit) with examples and explanations.',
-  keywords: 'IPv6, IPv6 checker, validate IPv6, IPv6 address format, next-generation IP',
-};
+const title = 'IPv6 Checker – Check Your IPv6 Address | OlhaIP';
+const description =
+  'Validate IPv6 addresses and understand IPv6 formatting. Check if an IP address is valid IPv6 (128-bit) with examples and explanations.';
+const path = '/ipv6-checker';
+
+export const metadata = buildMetadata({ title, description, path });
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <StructuredData
+        schema={generateWebApplicationSchema(baseTitle(title), description, `${SITE_URL}${path}`)}
+      />
+      {children}
+    </>
+  );
 }

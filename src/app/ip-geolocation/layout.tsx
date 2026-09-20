@@ -1,11 +1,21 @@
-import { Metadata } from 'next';
+import { buildMetadata, baseTitle, SITE_URL } from '@/lib/seo';
+import { generateWebApplicationSchema } from '@/lib/schema';
+import { StructuredData } from '@/components/seo/StructuredData';
 
-export const metadata: Metadata = {
-  title: 'IP Geolocation – Find Location From IP Address | OlhaIP',
-  description: 'Determine the approximate geographical location of an IP address. Understand IP geolocation accuracy and privacy implications. City/region level precision.',
-  keywords: 'IP geolocation, geolocation, IP location, find location, geoIP, IP address location',
-};
+const title = 'IP Geolocation – Find Location From IP Address | OlhaIP';
+const description =
+  'Find the approximate location of any IP address. Learn how IP geolocation works, how accurate it is, and what it means for your privacy.';
+const path = '/ip-geolocation';
+
+export const metadata = buildMetadata({ title, description, path });
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <StructuredData
+        schema={generateWebApplicationSchema(baseTitle(title), description, `${SITE_URL}${path}`)}
+      />
+      {children}
+    </>
+  );
 }

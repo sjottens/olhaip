@@ -1,13 +1,14 @@
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import Link from 'next/link';
+import { buildMetadata } from '@/lib/seo';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 
-export const metadata = {
+export const metadata = buildMetadata({
   title: 'Guides & Articles | OlhaIP',
   description:
-    'Learn about IP addresses, networking concepts, DNS, and internet technologies.',
-  keywords: 'guides, articles, tutorials, IP address education',
-};
+    'Learn about IP addresses, networking concepts, DNS, VPNs and internet technologies with our plain-language guides.',
+  path: '/guides',
+});
 
 const guides = [
   {

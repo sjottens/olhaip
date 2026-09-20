@@ -13,7 +13,7 @@ const siteConfig = {
   name: 'OlhaIP',
   url: 'https://olhaip.com',
   description: 'See what the internet sees. Check your public IP address and understand your connection.',
-  logo: 'https://olhaip.com/logo.png',
+  logo: 'https://olhaip.com/logo-mare26-camel.png',
 };
 
 export function generateWebSiteSchema(): SchemaOrg {
@@ -23,14 +23,6 @@ export function generateWebSiteSchema(): SchemaOrg {
     name: siteConfig.name,
     url: siteConfig.url,
     description: siteConfig.description,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${siteConfig.url}/guides?q={search_term_string}`,
-      },
-      query_input: 'required name=search_term_string',
-    },
   };
 }
 
@@ -42,6 +34,34 @@ export function generateOrganizationSchema(): SchemaOrg {
     url: siteConfig.url,
     description: siteConfig.description,
     logo: siteConfig.logo,
+  };
+}
+
+export function generateWebApplicationSchema(
+  name: string,
+  description: string,
+  url: string
+): SchemaOrg {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name,
+    description,
+    url,
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Any',
+    browserRequirements: 'Requires JavaScript',
+    isAccessibleForFree: true,
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
   };
 }
 
@@ -68,7 +88,7 @@ export function generateArticleSchema(
   title: string,
   description: string,
   url: string,
-  content: string
+  content?: string
 ): SchemaOrg {
   return {
     '@context': 'https://schema.org',
@@ -76,7 +96,9 @@ export function generateArticleSchema(
     headline: title,
     description: description,
     url: url,
-    articleBody: content,
+    ...(content ? { articleBody: content } : {}),
+    mainEntityOfPage: url,
+    image: siteConfig.logo,
     author: {
       '@type': 'Organization',
       name: siteConfig.name,

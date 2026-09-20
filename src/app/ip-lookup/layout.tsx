@@ -1,11 +1,21 @@
-import { Metadata } from 'next';
+import { buildMetadata, baseTitle, SITE_URL } from '@/lib/seo';
+import { generateWebApplicationSchema } from '@/lib/schema';
+import { StructuredData } from '@/components/seo/StructuredData';
 
-export const metadata: Metadata = {
-  title: 'IP Address Lookup – Look Up Any IP | OlhaIP',
-  description: 'Lookup any IPv4 or IPv6 address instantly. Identify the type, version, and validity of any IP address with our fast tool.',
-  keywords: 'IP lookup, IPv4 lookup, IPv6 lookup, IP address checker, look up IP',
-};
+const title = 'IP Address Lookup – Look Up Any IP | OlhaIP';
+const description =
+  'Lookup any IPv4 or IPv6 address instantly. Identify the type, version, and validity of any IP address with our fast tool.';
+const path = '/ip-lookup';
+
+export const metadata = buildMetadata({ title, description, path });
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <StructuredData
+        schema={generateWebApplicationSchema(baseTitle(title), description, `${SITE_URL}${path}`)}
+      />
+      {children}
+    </>
+  );
 }

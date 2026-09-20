@@ -1,11 +1,21 @@
-import { Metadata } from 'next';
+import { buildMetadata, baseTitle, SITE_URL } from '@/lib/seo';
+import { generateWebApplicationSchema } from '@/lib/schema';
+import { StructuredData } from '@/components/seo/StructuredData';
 
-export const metadata: Metadata = {
-  title: 'My Browser Information | OlhaIP',
-  description: 'Check your browser name, operating system, device type, screen resolution, and other system information.',
-  keywords: 'browser info, user agent, operating system, device type',
-};
+const title = 'My Browser Information | OlhaIP';
+const description =
+  'Check your browser name, operating system, device type, screen resolution, and other system information.';
+const path = '/browser-info';
+
+export const metadata = buildMetadata({ title, description, path });
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <StructuredData
+        schema={generateWebApplicationSchema(baseTitle(title), description, `${SITE_URL}${path}`)}
+      />
+      {children}
+    </>
+  );
 }

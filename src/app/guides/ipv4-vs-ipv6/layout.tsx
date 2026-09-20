@@ -2,10 +2,10 @@ import { buildMetadata, baseTitle, SITE_URL } from '@/lib/seo';
 import { generateArticleSchema } from '@/lib/schema';
 import { StructuredData } from '@/components/seo/StructuredData';
 
-const title = 'Does a VPN Change Your IP Address | OlhaIP';
+const title = 'IPv4 vs IPv6: What Is the Difference? | OlhaIP';
 const description =
-  'Learn how VPNs change your IP address and why this matters for your privacy and security online.';
-const path = '/guides/does-vpn-change-your-ip';
+  'Compare IPv4 and IPv6: address format, address space, and the key differences between the two internet protocols.';
+const path = '/guides/ipv4-vs-ipv6';
 
 export const metadata = buildMetadata({ title, description, path, type: 'article' });
 

@@ -1,11 +1,13 @@
-import { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: 'Privacy Policy | OlhaIP',
-  description: 'OlhaIP privacy policy - how we handle your data.',
-};
+  description:
+    'Read the OlhaIP privacy policy to learn what data we collect, how we handle your IP address, and how we protect your privacy.',
+  path: '/privacy',
+});
 
 export default function PrivacyPage() {
   return (

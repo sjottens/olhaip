@@ -1,12 +1,21 @@
-import { Metadata } from 'next';
+import { buildMetadata, baseTitle, SITE_URL } from '@/lib/seo';
+import { generateWebApplicationSchema } from '@/lib/schema';
+import { StructuredData } from '@/components/seo/StructuredData';
 
-export const metadata: Metadata = {
-  title: 'Internet Speed Test | OlhaIP',
-  description:
-    'Test your internet speed: measure download speed, upload speed, latency and jitter directly from your browser.',
-  keywords: 'speed test, internet speed test, download speed, upload speed, ping, latency, jitter',
-};
+const title = 'Internet Speed Test | OlhaIP';
+const description =
+  'Test your internet speed: measure download speed, upload speed, latency and jitter directly from your browser.';
+const path = '/speed-test';
+
+export const metadata = buildMetadata({ title, description, path });
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      <StructuredData
+        schema={generateWebApplicationSchema(baseTitle(title), description, `${SITE_URL}${path}`)}
+      />
+      {children}
+    </>
+  );
 }

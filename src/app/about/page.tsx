@@ -1,11 +1,13 @@
-import { Metadata } from 'next';
+import { buildMetadata } from '@/lib/seo';
 import { Card, CardContent, CardHeader } from '@/components/ui/Card';
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs';
 
-export const metadata: Metadata = {
-  title: 'About OlhaIP',
-  description: 'About OlhaIP - See what the internet sees. Check your IP address and understand your connection.',
-};
+export const metadata = buildMetadata({
+  title: 'About | OlhaIP',
+  description:
+    'Learn about OlhaIP: our mission to help you see what the internet sees, check your IP address and understand your connection.',
+  path: '/about',
+});
 
 export default function AboutPage() {
   return (
